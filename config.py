@@ -8,7 +8,7 @@ import os
 # ── HuggingFace ───────────────────────────────────────────────────────────────
 # Option A: set env var:  export HF_TOKEN=hf_xxxxxxxxxxxx
 # Option B: paste token directly below (not recommended for git repos)
-HUGGINGFACE_TOKEN: str = os.environ.get("HF_TOKEN", "")
+
 
 # Primary emotion model (7-class, English)
 # Requires HF token only if the repo is gated; this one is public.

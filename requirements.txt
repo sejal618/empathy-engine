@@ -13,7 +13,7 @@ torch>=2.0.0          # CPU version fine; see README for lightweight install
 
 # Emotion detection — fallback
 vaderSentiment>=3.3.2
-
+audioop-lts
 # ── System dependency (not pip) ──────────────────────────────────────────
 # ffmpeg is required by pydub. Install it separately:
 #   macOS:   brew install ffmpeg
