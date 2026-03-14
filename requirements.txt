@@ -1,0 +1,21 @@
+# Web framework
+flask>=2.3.0
+
+# TTS
+gtts>=2.3.2
+
+# Audio processing (requires ffmpeg on system)
+pydub>=0.25.1
+
+# Emotion detection — primary (7-class granular)
+transformers>=4.35.0
+torch>=2.0.0          # CPU version fine; see README for lightweight install
+
+# Emotion detection — fallback
+vaderSentiment>=3.3.2
+
+# ── System dependency (not pip) ──────────────────────────────────────────
+# ffmpeg is required by pydub. Install it separately:
+#   macOS:   brew install ffmpeg
+#   Ubuntu:  sudo apt install ffmpeg
+#   Windows: https://ffmpeg.org/download.html
