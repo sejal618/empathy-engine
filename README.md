@@ -40,7 +40,7 @@ sudo apt update && sudo apt install ffmpeg
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/empathy-engine.git
+git clone https://github.com/sejal618/empathy-engine.git
 cd empathy-engine
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
@@ -52,14 +52,15 @@ pip install -r requirements.txt
 > pip install flask gtts pydub vaderSentiment
 > ```
 
-### Set HuggingFace Token
+### HuggingFace Token (Optional)
+The app works without a token — model downloads automatically on first run.
 
+> ⚠️ First run downloads ~330MB model. Please wait 2-3 minutes.
+
+For faster downloads, optionally set:
 ```bash
-# Recommended: environment variable
-export HF_TOKEN=hf_xxxxxxxxxxxxxxxx
-
-# Or: edit config.py directly
-HUGGINGFACE_TOKEN = "hf_xxxxxxxxxxxxxxxx"
+set HF_TOKEN=hf_your_token_here   # Windows
+export HF_TOKEN=hf_your_token_here # macOS/Linux
 ```
 
 ### Run
@@ -163,6 +164,10 @@ empathy_engine/
 **Intensity scaling** — a flat mapping (joy = always +3st) sounds artificial. Scaling by confidence makes the output feel proportional to the actual emotional content.
 
 ---
+## Known Limitations
+- ALL CAPS text may be misclassified as anger due to model training bias
+- First run takes 2-3 minutes to download the emotion model (~330MB)
+- Requires internet connection for gTTS audio synthesis
 
 ## License
 
